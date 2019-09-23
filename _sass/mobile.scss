@@ -111,18 +111,6 @@ header nav li {
     }
 }
 
-header nav.subnav {
-  z-index: 2;
-  margin: 10px 0 -40px;
-  position: absolute;
-  right: 0;
-}
-
-header .subnav a {
-  padding-right: 0;
-  padding-left: 20px;
-}
-
 header .nav-slider {
   height: 10px;
   background-color: $black;
@@ -148,28 +136,6 @@ header .nav-selection.blog {
 header .nav-selection.projects {
     width: 60px;
     left: 107px;
-}
-
-header .subnav-selection {
-  position: absolute;
-  height: 10px;
-  background-color: $black;
-  width: 50px;
-}
-
-header .subnav-selection.exemplar-home {
-  right: 140px;
-  width: 42px;
-}
-
-header .subnav-selection.exemplar-docs {
-  right: 87px;
-  width: 35px;
-}
-
-header .subnav-selection.download {
-  right: 0;
-  width: 69px;
 }
 
 header .profile {

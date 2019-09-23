@@ -46,27 +46,5 @@
         <div class="nav-slider">
             <div class="nav-selection {{ page.nav }}"></div>
         </div>
-        <div class="subnav-slider">
-            <div class="subnav-selection {{ page.subnav }}"></div>
-        </div>
-        <nav class="subnav">
-            <ul>
-                {% if page.subnav == "exemplar-home" %}
-                  <li><a href="/exemplar" class="active" data-subnav="exemplar-home">Home</a></li>
-                {% else %}
-                    <li><a href="/exemplar" data-subnav="exemplar-home">Home</a></li>
-                {% endif %}
-                {% if page.subnav == "exemplar-docs" %}
-                    <li><a href="/exemplar/docs" class="active" data-subnav="exemplar-docs">Docs</a></li>
-                {% else %}
-                    <li><a href="/exemplar/docs" data-subnav="exemplar-docs">Docs</a></li>
-                {% endif %}
-                {% if page.subnav == "download" %}
-                    <li><a href="https://github.com/tybenz/exemplar/archive/master.zip" class="active" data-subnav="download">Download</a></li>
-                {% else %}
-                    <li><a href="https://github.com/tybenz/exemplar/archive/master.zip" data-subnav="download">Download</a></li>
-                {% endif %}
-            </ul>
-        </nav>
     </div>
 </header>

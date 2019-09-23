@@ -1,7 +1,6 @@
 ---
 title: Docs
 nav: projects
-subnav: exemplar-docs
 layout: default
 ---
 

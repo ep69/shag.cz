@@ -1,7 +1,6 @@
 ---
 title: Shag!
 nav: news
-subnav: exemplar-home
 layout: default
 ---
 
