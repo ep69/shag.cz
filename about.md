@@ -3,16 +3,13 @@ layout: page
 title: About
 permalink: /about/
 ---
+We are a group of terrible people brought together by collegiate shag, which actually makes us nice(er) to each other. We are from Brno. We are more enthusiastic than experienced. We welcome everybody to shag with us!
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Contacts:
+* Standa - mail (e.p AT centrum.cz), [instagram][instagram-standa]
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+Interesting links:
+* [collegiate shag video][shag-stephen] that motivated everybody
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+[shag-stephen]: https://www.youtube.com/watch?v=uUGsLoZYXb4
+[instagram-standa]: https://www.instagram.com/ep69/
