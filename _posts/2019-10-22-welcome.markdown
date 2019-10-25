@@ -6,6 +6,6 @@ categories: organization
 ---
 Hi shaggers, shagsters, shaggists, shaggamuffins, and all other supporters of the greatest dance ever. We just created a website. Perhaps you noticed. Anyway, not much is here (yet), but we will keep adding stuff. Or not and it will just die as many other projects. Who knows.
 
-Check out our instagram profile [@lenka_standa][instagram] - that is alive so far.
+Check out our instagram profile [@shag.cz][instagram] - that is alive so far.
 
-[instagram]: https://www.instagram.com/lenka_standa/
+[instagram]: https://www.instagram.com/shag.cz/
