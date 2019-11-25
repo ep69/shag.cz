@@ -4,7 +4,7 @@ title:  "Shag Alphabet"
 date:   2019-11-25 21:30:00 +0200
 categories: dance
 ---
-Good news everyone! We have started a new project - a library of shag moves. Great opportunity for you to get inspired, check out new variation, or just boost your confidence if you dance it better.
+Good news everyone! We have started a new project - a library of shag moves. Great opportunity for you to get inspired, check out new variations, or just boost your confidence if you dance it better.
 
 Check it out [here](/alphabet). Let us know what you want to add. Even better, make a video and we'll gladly include it.
 
