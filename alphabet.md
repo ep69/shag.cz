@@ -6,6 +6,8 @@ order: 50
 ---
 Shag alphabet is a growing collection of our amateur videos of shag moves, usually with couple of variations. Enjoy. And dance it better than we do.
 
+<!-- Links created with: https://www.publicalbum.org/blog/embedding-google-photos-image -->
+
 Tuck-turn
 ---------
 <div style="text-align:center;">
