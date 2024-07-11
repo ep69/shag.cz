@@ -13,6 +13,45 @@
 <title>Collegiate Shag in Brno</title>
 <link rel="icon" type="image/png" href="shag-cz-32x32.png" sizes="32x32">
 
+<script>
+const mySheetUrl =
+  "https://docs.google.com/spreadsheets/d/e/2PACX-1vSD5DUgh7EgLSJZJAhRSYwDm_DZhCsQUTlv4bReDfgWgHTsMwjyPwpfTc66yBmhJY-kihTljPfZI0x6/pub?output=tsv";
+
+const getData = async (url) => {
+  const response = await fetch(url);
+  return response.text();
+};
+
+getData(mySheetUrl).then((data) => {
+  const events = data
+    .split(/\r?\n/)
+    .map((l) => l.split("\t"))
+    .map((event) => {
+      return {
+        date: event[0],
+        title: event[1],
+        location: event[2],
+      };
+    });
+  attachEvents(events);
+});
+
+const attachEvents = (events) => {
+  let htmlToAppend = "";
+
+  events.forEach((event) => {
+    htmlToAppend += `
+    <div>
+    <h2>${event.title}</h2>
+    <em>${new Date(event.date).toLocaleDateString("cs-CZ")}</em>
+    ${event.location && `<p>${event.location}</p>`}
+    </div>`;
+  });
+
+  document.getElementById("events").innerHTML = htmlToAppend;
+};
+</script>
+
 <style>
 :root {
     --red:#fe5f5e;
@@ -85,4 +124,7 @@ h1 {
         <li>Festival: <a href="https://www.absolutelyshag.cz">Absolutely Shag!</a></li>
         <li>and much more in our <a href="https://calendar.google.com/calendar/embed?src=2bc0ae0d9e4d0d8567858f3d78b8d7e2d87d2dcc41cb430f07a0c1efbe65efc9%40group.calendar.google.com&ctz=Europe%2FPrague">calendar</a></li>
     </ul>
+    <div id="events">
+        nothing
+    </div>
 </body>
