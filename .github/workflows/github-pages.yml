@@ -1,0 +1,43 @@
+name: Generate and deploy github pages
+
+on:
+  push: # refresh in case of changes
+    branches: ["master"]
+  schedule: # refresh every hour
+    - cron:  '42 * * * *'
+  workflow_dispatch: # refresh manually
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Generate index.html
+        env:
+          GAPI_KEY: ${{ secrets.GAPI_KEY }}
+        run: |
+          sudo apt-get install -y python3 python3-jinja2 python3-googleapi
+          python3 fetch-events.py
+          rm -f fetch-events.py
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
