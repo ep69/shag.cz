@@ -1,12 +1,10 @@
-import csv
+import os
 import datetime
 from pprint import pprint
 from googleapiclient.discovery import build
 from jinja2 import Environment, FileSystemLoader
 
-import secrets
-
-api_key = secrets.api_key
+api_key = os.environ['GAPI_KEY']
 calendar_id = "2bc0ae0d9e4d0d8567858f3d78b8d7e2d87d2dcc41cb430f07a0c1efbe65efc9@group.calendar.google.com"
 now = datetime.datetime.now().astimezone().isoformat()
 maxResults = 10

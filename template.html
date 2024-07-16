@@ -17,6 +17,7 @@
 :root {
     --red:#fe5f5e;
     --white:#f8f5f0;
+    --gray:#a9a9a9;
 }
 
 @font-face {
@@ -75,6 +76,9 @@ h2 {
     font-size: min(1.5em, 6vw);
     color: var(--red);
 }
+.events .when {
+    color: var(--gray);
+}
 </style>
 
 </head>
@@ -90,12 +94,13 @@ h2 {
         <li>Festival: <a href="https://www.absolutelyshag.cz">Absolutely Shag!</a></li>
         <li>and much more in our <a href="https://calendar.google.com/calendar/embed?src=2bc0ae0d9e4d0d8567858f3d78b8d7e2d87d2dcc41cb430f07a0c1efbe65efc9%40group.calendar.google.com&ctz=Europe%2FPrague">calendar</a></li>
     </ul>
-    <div id="events">
+    <div class="events">
     <h2>Upcoming events:</h2>
     <ul>
     {% for event in events %}
         <li>
-            {{ event.when }}: {{ event.summary }}
+            <span class="summary">{{ event.summary }}</span>
+            <span class="when">({{ event.when }})</span>
         </li>
     {% endfor %}
     </ul>
