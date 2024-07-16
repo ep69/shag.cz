@@ -93,43 +93,11 @@ h2 {
     <div id="events">
     <h2>Upcoming events:</h2>
     <ul>
-    
+    {% for event in events %}
         <li>
-            2024-07-18 17:30 - 22:30: Bal-shag trénink a tančírna v altánku
+            {{ event.when }}: {{ event.summary }}
         </li>
-    
-        <li>
-            2024-07-25 17:30 - 19:00: Shag open trénink - 4.p.
-        </li>
-    
-        <li>
-            2024-08-08 17:30 - 19:00: Shag open trénink - 4.p.
-        </li>
-    
-        <li>
-            2024-08-22 17:30 - 19:00: Shag open trénink - 4.p.
-        </li>
-    
-        <li>
-            2024-08-22 19:00 - 22:00: Bal-shag na Skleněnce
-        </li>
-    
-        <li>
-            2024-09-05 17:30 - 19:00: Shag open trénink - 4.p.
-        </li>
-    
-        <li>
-            2024-09-13 - 2024-09-16: Shag Republic
-        </li>
-    
-        <li>
-            2024-09-20 - 2024-09-23: BCN SHAG Festival
-        </li>
-    
-        <li>
-            2024-11-01 - 2024-11-04: Absolutely Shag
-        </li>
-    
+    {% endfor %}
     </ul>
     </div>
 </body>
