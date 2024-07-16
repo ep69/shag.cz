@@ -8,11 +8,11 @@ import secrets
 
 api_key = secrets.api_key
 calendar_id = "2bc0ae0d9e4d0d8567858f3d78b8d7e2d87d2dcc41cb430f07a0c1efbe65efc9@group.calendar.google.com"
-start = datetime.datetime.now().astimezone().isoformat()
+now = datetime.datetime.now().astimezone().isoformat()
 maxResults = 10
 
 service = build("calendar", "v3", developerKey=api_key)
-events_result = service.events().list(calendarId=calendar_id, timeMin=start, maxResults=maxResults, timeZone="Europe/Prague").execute()
+events_result = service.events().list(calendarId=calendar_id, timeMin=now, maxResults=maxResults, timeZone="Europe/Prague").execute()
 #pprint(events_result)
 
 events = []
@@ -70,7 +70,10 @@ events = sorted(events, key=lambda x: x["when"])
 environment = Environment(loader=FileSystemLoader("./"))
 page_template = environment.get_template("template.html")
 page_filename = "index.html"
-context = { "events": events }
+context = {
+    "events": events,
+    "date": now,
+    }
 with open(page_filename, mode="w", encoding="utf-8") as page:
     page.write(page_template.render(context))
 #print(page_template.render(context))
