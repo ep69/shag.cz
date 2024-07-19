@@ -11,7 +11,7 @@ api_key = os.environ['GAPI_KEY']
 calendar_id = "2bc0ae0d9e4d0d8567858f3d78b8d7e2d87d2dcc41cb430f07a0c1efbe65efc9@group.calendar.google.com"
 maxResults = 10
 service = build("calendar", "v3", developerKey=api_key)
-events_result = service.events().list(calendarId=calendar_id, timeMin=now, maxResults=maxResults, timeZone="Europe/Prague").execute()
+events_result = service.events().list(calendarId=calendar_id, timeMin=now, singleEvents=True, orderBy="startTime", maxResults=maxResults, timeZone="Europe/Prague").execute()
 #pprint(events_result)
 
 events = []
