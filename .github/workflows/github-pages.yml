@@ -34,6 +34,12 @@ jobs:
           sudo apt-get install -y python3 python3-jinja2 python3-googleapi
           python3 fetch-events.py
           rm -f fetch-events.py
+      - name: Generate slides
+        uses: docker://marpteam/marp-cli:latest
+        with:
+          args: -o slides/index.html --html -- slides/slides.md
+        env:
+          MARP_USER: root:root
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
