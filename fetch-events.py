@@ -1,5 +1,6 @@
+import sys
 import os
-from datetime import datetime
+from datetime import datetime, date, timedelta
 from zoneinfo import ZoneInfo
 from pprint import pprint
 from googleapiclient.discovery import build
@@ -23,6 +24,9 @@ for e in events_result.get("items", []):
     if "date" in start:
         start_s = start.get("date")
         end_s = end.get("date", None)
+        if end_s is not None:
+            # google calendar returns the day after as "whole day event" end
+            end_s = (date.fromisoformat(end_s)-timedelta(1)).isoformat()
         if end_s is not None and end_s != start_s:
             when_s = f"{start_s} - {end_s}"
         else:
